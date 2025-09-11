@@ -2,19 +2,27 @@
  * Pinecone Credential Definition
  */
 
-import { NodeCredential } from "@gravityai-dev/plugin-base";
-
-export const pineconeCredential: NodeCredential = {
+export const PineconeCredential = {
   name: "pineconeCredential",
-  displayName: "Pinecone API Key",
-  description: "API key for Pinecone vector database access",
-  fields: [
+  displayName: "Pinecone",
+  description: "Credentials for Pinecone vector database",
+  properties: [
     {
       name: "apiKey",
-      type: "password",
-      label: "API Key",
-      description: "Your Pinecone API key",
+      displayName: "API Key",
+      type: "string" as const,
       required: true,
+      secret: true,
+      description: "Your Pinecone API key",
+      placeholder: "pc-xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
+    },
+    {
+      name: "environment",
+      displayName: "Environment",
+      type: "string" as const,
+      required: true,
+      description: "Your Pinecone environment",
+      placeholder: "us-east-1-aws"
     },
   ],
 };

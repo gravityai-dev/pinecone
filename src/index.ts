@@ -29,8 +29,8 @@ const plugin = createPlugin({
     api.registerNode(PineconeUploadNode);
 
     // Import and register Pinecone credentials
-    const { pineconeCredential } = await import("./credentials");
-    api.registerCredential(pineconeCredential);
+    const { PineconeCredential } = await import("./credentials");
+    api.registerCredential(PineconeCredential);
   },
 });
 
