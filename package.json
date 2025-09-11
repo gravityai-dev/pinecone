@@ -1,6 +1,6 @@
 {
   "name": "@gravityai-dev/pinecone",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Pinecone vector database nodes for GravityWorkflow - knowledge management and vector operations",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
