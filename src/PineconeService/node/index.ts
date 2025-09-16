@@ -7,7 +7,7 @@ function createNodeDefinition(): EnhancedNodeDefinition {
   const { NodeInputType } = getPlatformDependencies();
   
   return {
-    packageVersion: "1.0.12",
+    packageVersion: "1.0.13",
     type: NODE_TYPE,
     name: "Pinecone Service",
     description: "Vector database service provider for semantic search and storage",
