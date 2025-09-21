@@ -7,14 +7,14 @@ function createNodeDefinition(): EnhancedNodeDefinition {
   const { NodeInputType } = getPlatformDependencies();
   
   return {
-    packageVersion: "1.0.14",
+    packageVersion: "1.0.17",
     type: NODE_TYPE,
     name: "Pinecone Service",
     description: "Vector database service provider for semantic search and storage",
     category: "Knowledge",
     color: "#0080FF",
     logoUrl: "https://res.cloudinary.com/sonik/image/upload/v1749139513/gravity/icons/pinecone.png",
-    isService: true,
+    template: "service", // Options: "standard", "service", "mini"
     inputs: [],
     outputs: [],
     serviceConnectors: [
@@ -22,7 +22,8 @@ function createNodeDefinition(): EnhancedNodeDefinition {
         name: "vectorService",
         description: "Provides vector database operations",
         serviceType: "vector",
-        methods: ["upsertVectors", "queryVectors", "deleteVectors", "describeIndexStats"],
+        methods: ["upsert", "query", "delete", "fetch", "update"],
+        isService: true, // This node PROVIDES vector services to others
       },
     ],
     configSchema: {

@@ -7,7 +7,7 @@ function createNodeDefinition(): EnhancedNodeDefinition {
   const { NodeInputType } = getPlatformDependencies();
   
   return {
-    packageVersion: "1.0.14",
+    packageVersion: "1.0.17",
     type: NODE_TYPE,
     isService: false,
     name: "Pinecone Query",
@@ -40,6 +40,7 @@ function createNodeDefinition(): EnhancedNodeDefinition {
         description: "Embedding service connection - needs createEmbedding method",
         serviceType: "embedding",
         methods: ["createEmbedding"],
+        isService: false, // This node CONSUMES embedding services from others
       },
     ],
     configSchema: {
