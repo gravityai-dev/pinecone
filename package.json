@@ -1,6 +1,6 @@
 {
   "name": "@gravityai-dev/pinecone",
-  "version": "1.0.19",
+  "version": "1.0.20",
   "description": "Pinecone vector database nodes for GravityWorkflow - knowledge management and vector operations",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -21,7 +21,7 @@
   "author": "GravityAI",
   "license": "MIT",
   "dependencies": {
-    "@gravityai-dev/plugin-base": "^1.0.28",
+    "@gravityai-dev/plugin-base": "^1.0.30",
     "@gravityai-dev/gravity-server": "^0.2.121",
     "@pinecone-database/pinecone": "^6.1.0"
   },
@@ -29,6 +29,6 @@
     "typescript": "^5.0.0"
   },
   "peerDependencies": {
-    "@gravityai-dev/plugin-base": "^1.0.28"
+    "@gravityai-dev/plugin-base": "^1.0.30"
   }
 }
